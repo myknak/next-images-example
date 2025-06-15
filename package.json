@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_OPTIONS='--max_old_space_size=2048' next build",
-    "start": "npx serve out",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -13,6 +13,7 @@
     "@radix-ui/react-navigation-menu": "1.2.5",
     "@radix-ui/react-slot": "1.1.2",
     "clsx": "2.1.1",
+    "critters": "0.0.20",
     "framer-motion": "10.18.0",
     "gsap": "3.12.7",
     "i18next": "23.8.2",
@@ -20,14 +21,13 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-i18next": "14.0.5",
-    "tailwind-merge": "3.0.2",
-    "serve": "^14.2.1"
+    "tailwind-merge": "3.0.2"
   },
   "devDependencies": {
     "@types/node": "20.17.24",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
-    "@builder.io/nextjs-plugin-jsx-loc": "^0.1.4",
+	"@builder.io/nextjs-plugin-jsx-loc": "^0.1.4",
     "autoprefixer": "10.4.21",
     "eslint": "8.57.1",
     "eslint-config-next": "14.2.25",
