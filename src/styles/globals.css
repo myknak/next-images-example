@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Basic colors */
+  --color-primary: #000000;
+  --color-secondary: #BFBFBF;
+  --color-accent: #F5E6D0;
+  --color-background: #FFFFFF;
+  --color-background-alt: #F8F8F8;
+  --color-text-body: rgba(0, 0, 0, 0.9);
+  --color-text-caption: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  color: var(--color-text-body);
+  background: var(--color-background);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 inline-block transition-all duration-300 hover:bg-secondary;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-secondary text-primary px-6 py-3 inline-block transition-all duration-300 hover:bg-secondary hover:text-white;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 md:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+}
