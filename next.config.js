@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
+  output: 'export', // Changed from 'standalone' to 'export' for full SSG
   images: {
     domains: ['d2jb2caottkk25.cloudfront.net'],
     formats: ['image/avif', 'image/webp'],
+    unoptimized: true, // Required for static export
   },
   // Disable experimental features that might be causing memory issues
   experimental: {
